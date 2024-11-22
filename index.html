@@ -196,6 +196,8 @@
           stimulus: counterbalancing, // Displaying memory image
           choices: [' '],
           trial_duration: 2000,
+          //need this to prevent trials from ending early
+          response_ends_trial: false,
           // repeated needs to check if memory_images > 4 since no n backs before and then it needs to access the memory image 4 prior to the current
           data: { trial_phase: "Memory", repeated: memory_images.length >= 4 && memory_images[memory_images.length - 5] === counterbalancing },
           on_finish: function (data) {
