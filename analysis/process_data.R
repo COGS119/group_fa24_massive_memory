@@ -6,7 +6,7 @@ processed_data_directory <- here("..","data","processed_data")
 file_name <- "massive_memory"
 
 #read experiment data
-exp_data <- read_csv(here(processed_data_directory,paste0(file_name,"-alldata.csv"))) %>%
+exp_data <- read.csv(here(processed_data_directory,paste0(file_name,"-alldata.csv"))) %>%
   rename(participant_id=participant)
 
 #double check that participant ids are unique
